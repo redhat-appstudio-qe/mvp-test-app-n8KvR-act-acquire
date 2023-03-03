@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: mvp-test-component
+  namespace: mvp-demo-dev-namespace-usli-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:d97127aaacb399267acde53f11edf1fbb1698b6913f2532297158da0dfe4843b
+        name: container-image
+        resources: {}
+status: {}
